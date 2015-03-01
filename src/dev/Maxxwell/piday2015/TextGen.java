@@ -13,6 +13,9 @@ public class TextGen {
 		if (n < 10) {
 			anum = "0" + anum;
 		}
+		else {
+			anum = Integer.toString(n);
+		}
 		
 		return anum;
 	}
