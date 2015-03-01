@@ -13,7 +13,7 @@ public class TextGen {
 		String anum = "";
 		
 		if (n < 10) {
-			anum = "0" + anum;
+			anum = "0" + Integer.toString(n);
 		}
 		else {
 			anum = Integer.toString(n);
