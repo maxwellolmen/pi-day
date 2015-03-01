@@ -5,6 +5,7 @@ import java.awt.FlowLayout;
 import java.awt.Font;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
 
 public class Display extends JFrame {
@@ -26,6 +27,36 @@ public class Display extends JFrame {
 	
 	public Display() {
 		super("Centennial Pi Day Countdown");
+		String month = JOptionPane.showInputDialog(null, "Please type in the number value of the destination month.");
+		String day = JOptionPane.showInputDialog(null, "Please type in the number value of the destination day.");
+		String hour = JOptionPane.showInputDialog(null, "Please type in the number value of the destination hour.");
+		String minute = JOptionPane.showInputDialog(null, "Please type in the number value of the destination minute.");
+		String second = JOptionPane.showInputDialog(null, "Please type in the number value of the destination second.");
+		
+		if (month.toCharArray().length < 2) {
+			month = " " + month;
+		}
+		
+		if (day.toCharArray().length < 2) {
+			day = " " + day;
+		}
+		
+		if (hour.toCharArray().length < 2) {
+			hour = " " + hour;
+		}
+		
+		if (minute.toCharArray().length < 2) {
+			minute = " " + minute;
+		}
+		
+		if (second.toCharArray().length < 2) {
+			second = " " + second;
+		}
+		
+		if (month.toCharArray().length == 2 && day.toCharArray().length == 2 && hour.toCharArray().length == 2 && minute.toCharArray().length == 2 && second.toCharArray().length == 2) {
+			String[] times = {month, day, hour, minute, second};
+			setDestination(times);
+		}
 		System.out.println("Loading interface settings...");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(1300, 232);
@@ -60,8 +91,6 @@ public class Display extends JFrame {
 		System.out.println("Starting countdown calculator...");
 		Calculate c = new Calculate(this);
 		c.start();
-		KeyEvent ke = new KeyEvent(this);
-		addKeyListener(ke);
 	}
 	
 	public void setDays(int days) {
