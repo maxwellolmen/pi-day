@@ -9,16 +9,16 @@ import javax.swing.JTextArea;
 public class Display extends JFrame {
 	private static final long serialVersionUID = 1L;
 	
-	private JTextArea days = new JTextArea(11, 42);
-	private JTextArea hours = new JTextArea(11, 42);
-	private JTextArea minutes = new JTextArea(11, 42);
-	private JTextArea seconds = new JTextArea(11, 42);
+	private JTextArea days = new JTextArea(11, 15);
+	private JTextArea hours = new JTextArea(11, 15);
+	private JTextArea minutes = new JTextArea(11, 15);
+	private JTextArea seconds = new JTextArea(11, 15);
 	
 	public Display() {
 		super("Centennial Pi Day Countdown");
 		System.out.println("Loading interface settings...");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setSize(4000, 300);
+		setSize(800, 300);
 		setResizable(false);
 		setLayout(new FlowLayout());
 		setVisible(true);
