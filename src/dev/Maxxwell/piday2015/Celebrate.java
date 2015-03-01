@@ -10,18 +10,18 @@ import javax.swing.JTextArea;
 public class Celebrate extends JFrame {
 	private static final long serialVersionUID = 1L;
 
-	private JTextArea jta = new JTextArea();
+	private JTextArea jta = new JTextArea(24, 45);
 	
 	public Celebrate() {
 		super("HAPPY CENTENNIAL PI DAY!");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setSize(1300, 232);
+		setSize(850, 330);
 		setResizable(false);
 		setLayout(new FlowLayout());
 		setVisible(true);
 		Container cp = getContentPane();
 		jta.setEditable(false);
-		jta.setFont(new Font("Courier", Font.PLAIN, 11));
+		jta.setFont(new Font("Courier", Font.BOLD, 33));
 		cp.add(jta);
 		CelebCalc calc = new CelebCalc(this);
 		calc.start();
@@ -30,8 +30,10 @@ public class Celebrate extends JFrame {
 	public void setText(String[] text) {
 		String txt = "";
 		for (int i = 0; i < text.length; i++) {
-			txt+=text[i];
+			txt = txt + text[i] + "\n";
+			System.out.println(txt);
 		}
+		
 		jta.setText(txt);
 	}
 }

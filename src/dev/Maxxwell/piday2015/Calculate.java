@@ -36,6 +36,7 @@ public class Calculate extends Thread {
 			if (times[0] == 0 && times[1] == 0 && times[2] == 0 && times[3] == 1) {
 				d.setVisible(false);
 				new Celebrate();
+				running = false;
 			}
 		}
 	}
@@ -43,9 +44,9 @@ public class Calculate extends Thread {
 	public int secondsDistance() {
 		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 		
-		Date d = new Date();
+		Date dt = new Date();
 		
-		String when = dateFormat.format(d);
+		String when = dateFormat.format(dt);
 		String date = when.split(" ")[0];
 		String time = when.split(" ")[1];
 		
@@ -63,49 +64,94 @@ public class Calculate extends Thread {
 		int minutedistance = 0;
 		int seconddistance = 0;
 		
-		if (!month.equals("03")) {
+		if (!month.equals(d.getMonth())) {
 			if (month.toCharArray()[0] == '0') {
 				month = "" + month.toCharArray()[1];
 			}
 			
-			if (Integer.parseInt(month) > 3) {
-				monthdistance = (12 - Integer.parseInt(month) + 3);
+			int m = 0;
+			
+			if (d.getMonth().toCharArray()[0] == '0') {
+				m = Integer.parseInt("" + d.getMonth().toCharArray()[1]);
 			}
 			else {
-				monthdistance = 3 - Integer.parseInt(month);
+				m = Integer.parseInt(d.getMonth());
+			}
+			
+			if (Integer.parseInt(month) > 3) {
+				monthdistance = (12 - Integer.parseInt(month) + m);
+			}
+			else {
+				monthdistance = m - Integer.parseInt(month);
 			}
 		}
 		
-		if (!day.equals("01")) {
+		if (!day.equals(d.getDay())) {
 			if (day.toCharArray()[0] == '0') {
 				day = "" + day.toCharArray()[1];
 			}
 			
-			daydistance = 1 - Integer.parseInt(day);
+			int dy = 0;
+			
+			if (d.getDay().toCharArray()[0] == '0') {
+				dy = Integer.parseInt("" + d.getMonth().toCharArray()[1]);
+			}
+			else {
+				dy = Integer.parseInt(d.getMonth());
+			}
+			
+			daydistance = dy - Integer.parseInt(day);
 		}
 		
-		if (!hour.equals("00")) {
+		if (!hour.equals(d.getHour())) {
 			if (hour.toCharArray()[0] == '0') {
 				hour = "" + hour.toCharArray()[1];
 			}
 			
-			hourdistance = 0 - Integer.parseInt(hour);
+			int h = 0;
+			
+			if (d.getHour().toCharArray()[0] == '0') {
+				h = Integer.parseInt("" + d.getMonth().toCharArray()[1]);
+			}
+			else {
+				h = Integer.parseInt(d.getMonth());
+			}
+			
+			hourdistance = h - Integer.parseInt(hour);
 		}
 		
-		if (!minute.equals("13")) {
+		if (!minute.equals(d.getMinute())) {
 			if (minute.toCharArray()[0] == '0') {
 				minute = "" + minute.toCharArray()[1];
 			}
 			
-			minutedistance = 13 - Integer.parseInt(minute);
+			int m = 0;
+			
+			if (d.getMinute().toCharArray()[0] == '0') {
+				m = Integer.parseInt("" + d.getMonth().toCharArray()[1]);
+			}
+			else {
+				m = Integer.parseInt(d.getMonth());
+			}
+			
+			minutedistance = m - Integer.parseInt(minute);
 		}
 		
-		if (!second.equals("53")) {
+		if (!second.equals(d.getSecond())) {
 			if (second.toCharArray()[0] == '0') {
 				second = "" + second.toCharArray()[1];
 			}
 			
-			seconddistance = 53 - Integer.parseInt(second);
+			int s = 0;
+			
+			if (d.getSecond().toCharArray()[0] == '0') {
+				s = Integer.parseInt("" + d.getMonth().toCharArray()[1]);
+			}
+			else {
+				s = Integer.parseInt(d.getMonth());
+			}
+			
+			seconddistance = s - Integer.parseInt(second);
 		}
 		
 		monthdistance*=(new Database().getDaysInMonth(Integer.parseInt(month), Integer.parseInt(year)) * 86400);

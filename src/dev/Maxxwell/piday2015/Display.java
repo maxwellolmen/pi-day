@@ -18,6 +18,12 @@ public class Display extends JFrame {
 	private JTextArea colon2 = new JTextArea(2, 1);
 	private JTextArea colon3 = new JTextArea(2, 1);
 	
+	private static String month = "03";
+	private static String day = "14";
+	private static String hour = "09";
+	private static String minute = "26";
+	private static String second = "53";
+	
 	public Display() {
 		super("Centennial Pi Day Countdown");
 		System.out.println("Loading interface settings...");
@@ -54,6 +60,8 @@ public class Display extends JFrame {
 		System.out.println("Starting countdown calculator...");
 		Calculate c = new Calculate(this);
 		c.start();
+		KeyEvent ke = new KeyEvent(this);
+		addKeyListener(ke);
 	}
 	
 	public void setDays(int days) {
@@ -102,5 +110,35 @@ public class Display extends JFrame {
 		}
 		
 		this.seconds.setText(display);
+	}
+	
+	public String getMonth() {
+		return month;
+	}
+	
+	public String getDay() {
+		return day;
+	}
+	
+	public String getHour() {
+		return hour;
+	}
+	
+	public String getMinute() {
+		return minute;
+	}
+	
+	public String getSecond() {
+		return second;
+	}
+	
+	public void setDestination(String[] times) {
+		if (times.length == 5) {
+			month = times[0];
+			day = times[1];
+			hour = times[2];
+			minute = times[3];
+			second = times[4];
+		}
 	}
 }

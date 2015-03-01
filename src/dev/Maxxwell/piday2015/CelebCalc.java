@@ -18,11 +18,24 @@ public class CelebCalc extends Thread {
 				String l3 = fw[2] + "  " + pi[1] + "  " + fw[2];
 				String l4 = fw[3] + "  " + pi[2] + "  " + fw[3];
 				String l5 = fw[4] + "  " + pi[3] + "  " + fw[4];
-				String l6 = fw[5] + "  " + pi[4] + "  " + fw[5];
+				String l6 = "               " + pi[4] + "               ";
+				
+				System.out.println(l1);
+				System.out.println(l2);
+				System.out.println(l3);
+				System.out.println(l4);
+				System.out.println(l5);
+				System.out.println(l6);
 				
 				String[] display = {l1, l2, l3, l4, l5, l6};
 				
 				c.setText(display);
+				
+				try {
+					Thread.sleep(47);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
 			}
 		}
 	}
