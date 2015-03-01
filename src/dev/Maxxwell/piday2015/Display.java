@@ -55,6 +55,11 @@ public class Display extends JFrame {
 		
 		if (month.toCharArray().length == 2 && day.toCharArray().length == 2 && hour.toCharArray().length == 2 && minute.toCharArray().length == 2 && second.toCharArray().length == 2) {
 			String[] times = {month, day, hour, minute, second};
+			System.out.println(month);
+			System.out.println(day);
+			System.out.println(hour);
+			System.out.println(minute);
+			System.out.println(second);
 			setDestination(times);
 		}
 		System.out.println("Loading interface settings...");

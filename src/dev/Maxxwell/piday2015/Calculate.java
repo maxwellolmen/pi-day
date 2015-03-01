@@ -94,10 +94,10 @@ public class Calculate extends Thread {
 			int dy = 0;
 			
 			if (d.getDay().toCharArray()[0] == '0') {
-				dy = Integer.parseInt("" + d.getMonth().toCharArray()[1]);
+				dy = Integer.parseInt("" + d.getDay().toCharArray()[1]);
 			}
 			else {
-				dy = Integer.parseInt(d.getMonth());
+				dy = Integer.parseInt(d.getDay());
 			}
 			
 			daydistance = dy - Integer.parseInt(day);
@@ -111,10 +111,10 @@ public class Calculate extends Thread {
 			int h = 0;
 			
 			if (d.getHour().toCharArray()[0] == '0') {
-				h = Integer.parseInt("" + d.getMonth().toCharArray()[1]);
+				h = Integer.parseInt("" + d.getHour().toCharArray()[1]);
 			}
 			else {
-				h = Integer.parseInt(d.getMonth());
+				h = Integer.parseInt(d.getHour());
 			}
 			
 			hourdistance = h - Integer.parseInt(hour);
@@ -128,10 +128,10 @@ public class Calculate extends Thread {
 			int m = 0;
 			
 			if (d.getMinute().toCharArray()[0] == '0') {
-				m = Integer.parseInt("" + d.getMonth().toCharArray()[1]);
+				m = Integer.parseInt("" + d.getMinute().toCharArray()[1]);
 			}
 			else {
-				m = Integer.parseInt(d.getMonth());
+				m = Integer.parseInt(d.getMinute());
 			}
 			
 			minutedistance = m - Integer.parseInt(minute);
@@ -145,10 +145,10 @@ public class Calculate extends Thread {
 			int s = 0;
 			
 			if (d.getSecond().toCharArray()[0] == '0') {
-				s = Integer.parseInt("" + d.getMonth().toCharArray()[1]);
+				s = Integer.parseInt("" + d.getSecond().toCharArray()[1]);
 			}
 			else {
-				s = Integer.parseInt(d.getMonth());
+				s = Integer.parseInt(d.getSecond());
 			}
 			
 			seconddistance = s - Integer.parseInt(second);
