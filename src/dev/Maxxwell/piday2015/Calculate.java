@@ -136,6 +136,26 @@ public class Calculate extends Thread {
 		
 		seconds-=(minutes * 60);
 		
+		if (seconds == 60) {
+			if (minutes == 0) {
+				if (hours == 0) {
+					seconds = 0;
+					minutes--;
+					hours--;
+					days--;
+				}
+				else {
+					seconds = 0;
+					minutes--;
+					hours--;
+				}
+			}
+			else {
+				seconds = 0;
+				minutes--;
+			}
+		}
+		
 		times[0] = days;
 		times[1] = hours;
 		times[2] = minutes;
