@@ -34,23 +34,23 @@ public class Display extends JFrame {
 		String second = JOptionPane.showInputDialog(null, "Please type in the number value of the destination second.");
 		
 		if (month.toCharArray().length < 2) {
-			month = " " + month;
+			month = "0" + month;
 		}
 		
 		if (day.toCharArray().length < 2) {
-			day = " " + day;
+			day = "0" + day;
 		}
 		
 		if (hour.toCharArray().length < 2) {
-			hour = " " + hour;
+			hour = "0" + hour;
 		}
 		
 		if (minute.toCharArray().length < 2) {
-			minute = " " + minute;
+			minute = "0" + minute;
 		}
 		
 		if (second.toCharArray().length < 2) {
-			second = " " + second;
+			second = "0" + second;
 		}
 		
 		if (month.toCharArray().length == 2 && day.toCharArray().length == 2 && hour.toCharArray().length == 2 && minute.toCharArray().length == 2 && second.toCharArray().length == 2) {
