@@ -16,6 +16,7 @@ public class Display extends JFrame {
 	
 	public Display() {
 		super("Centennial Pi Day Countdown");
+		System.out.println("Loading interface settings...");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(500, 300);
 		setResizable(false);
@@ -23,6 +24,7 @@ public class Display extends JFrame {
 		setVisible(true);
 		Container cp = getContentPane();
 		cp.add(days);
+		System.out.println("Starting countdown calculator...");
 		Calculate c = new Calculate(this);
 		c.start();
 	}

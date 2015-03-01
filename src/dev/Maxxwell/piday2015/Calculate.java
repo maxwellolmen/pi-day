@@ -14,6 +14,7 @@ public class Calculate extends Thread {
 	public void run() {
 		while (true) {
 			int su = secondsDistance();
+			System.out.println("Confirmed " + su + " seconds until destination date.");
 			
 			int[] times = getTimes(su);
 			
@@ -21,6 +22,15 @@ public class Calculate extends Thread {
 			d.setHours(times[1]);
 			d.setMinutes(times[2]);
 			d.setSeconds(times[3]);
+			
+			System.out.println("Confirmed " + times[0] + " days, " + times[1] + " hours, " + times[2] + " minutes, and " + times[3] + " seconds.");
+			
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			System.out.println("Slept for one second while looping through the countdown calculator.");
 		}
 	}
 	

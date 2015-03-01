@@ -2,8 +2,10 @@ package dev.Maxxwell.piday2015;
 
 public class TextGen {
 	public String[] gen(int n) {
+		System.out.println("Determining proper ASCII Art AN for the number " + n + "...");
 		String anum = getAnum(n);
 		
+		System.out.println("Determining the ASCII art for the AN " + anum + "...");
 		return genStrings(anum);
 	}
 	
@@ -22,6 +24,7 @@ public class TextGen {
 	
 	private String[] genStrings(String anum) {
 		char[] chars = anum.toCharArray();
+		System.out.println("Split characters.");
 		String[] ret = new String[22];
 		String[] c1 = new Database().getNumber(Integer.parseInt("" + chars[0]));
 		String[] c2 = new Database().getNumber(Integer.parseInt("" + chars[1]));
