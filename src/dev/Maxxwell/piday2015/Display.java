@@ -18,7 +18,7 @@ public class Display extends JFrame {
 		super("Centennial Pi Day Countdown");
 		System.out.println("Loading interface settings...");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setSize(800, 300);
+		setSize(708, 232);
 		setResizable(false);
 		setLayout(new FlowLayout());
 		setVisible(true);
