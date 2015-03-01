@@ -10,10 +10,10 @@ import javax.swing.JTextArea;
 public class Display extends JFrame {
 	private static final long serialVersionUID = 1L;
 	
-	private JTextArea days = new JTextArea(11, 15);
-	private JTextArea hours = new JTextArea(11, 15);
-	private JTextArea minutes = new JTextArea(11, 15);
-	private JTextArea seconds = new JTextArea(11, 15);
+	private JTextArea days = new JTextArea(9, 15);
+	private JTextArea hours = new JTextArea(9, 15);
+	private JTextArea minutes = new JTextArea(9, 15);
+	private JTextArea seconds = new JTextArea(9, 15);
 	private JTextArea colon1 = new JTextArea(2, 1);
 	private JTextArea colon2 = new JTextArea(2, 1);
 	private JTextArea colon3 = new JTextArea(2, 1);

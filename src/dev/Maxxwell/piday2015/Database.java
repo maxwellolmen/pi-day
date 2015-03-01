@@ -2,7 +2,7 @@ package dev.Maxxwell.piday2015;
 
 public class Database {
 	public String[] getNumber(int num) {
-		switch(num) {
+		switch (num) {
 		case 0:
 			String[] zero = {" .----------------. ", "| .--------------. |", "| |     ____     | |", "| |   .'    '.   | |", "| |  |  .--.  |  | |", "| |  | |    | |  | |", "| |  |  `--'  |  | |", "| |   '.____.'   | |", "| |              | |", "| '--------------' |", " '----------------' "};
 			return zero;
