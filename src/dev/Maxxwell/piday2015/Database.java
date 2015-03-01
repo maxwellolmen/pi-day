@@ -72,4 +72,64 @@ public class Database {
 			return 0;
 		}
 	}
+	
+	public String[] getPi() {
+		String[] pi = {" ,;;;;;;;;;;;;'", ";;'';;'';;'''  ", "'   ;;  ;;     ", "    ;;  ;;     ", "    ;;  ;;     ", "    ;'  ;'     "};
+		return pi;
+	}
+	
+	public String[] getFirework(int stage) {
+		switch (stage) {
+		case 1:
+			String[] fw1 = {"             ", "             ", "             ", "             ", "             "};
+			return fw1;
+		case 2:
+			String[] fw2 = {"             ", "             ", "             ", "             ", "             "};
+			return fw2;
+		case 3:
+			String[] fw3 = {"             ", "             ", "             ", "             ", "             "};
+			return fw3;
+		case 4:
+			String[] fw4 = {"             ", "             ", "      +      ", "             ", "             "};
+			return fw4;
+		case 5:
+			String[] fw5 = {"             ", "             ", "     =+=     ", "             ", "             "};
+			return fw5;
+		case 6:
+			String[] fw6 = {"             ", "     .|.     ", "    -=+=-    ", "     .|.     ", "             "};
+			return fw6;
+		case 7:
+			String[] fw7 = {"             ", "    '.|.'    ", "   --=+=--   ", "    '.|.'    ", "             "};
+			return fw7;
+		case 8:
+			String[] fw8 = {"    : | :    ", "   :'.|.':   ", "  ---=+=---  ", "   :'.|.':   ", "    : | :    "};
+			return fw8;
+		case 9:
+			String[] fw9 = {"   .: | :.   ", "  ::'.|.'::  ", " ~---=+=---~ ", "  ::'.|.'::  ", "   .: | :.   "};
+			return fw9;
+		case 10:
+			String[] fw10 = {"  '.: | :.'  ", "  ::'.|.'::  ", "~~---=+=---~~", "  ::'.|.'::  ", "  '.: | :.'  "};
+			return fw10;
+		case 11:
+			String[] fw11 = {"   .: | :.   ", "  ::'.|.'::  ", " ~---=+=---~ ", "  ::'.|.'::  ", "   .: | :.   "};
+			return fw11;
+		case 12:
+			String[] fw12 = {"    : | :    ", "   :'.|.':   ", "  ---=+=---  ", "   :'.|.':   ", "    : | :    "};
+			return fw12;
+		case 13:
+			String[] fw13 = {"             ", "    '.|.'    ", "   --=+=--   ", "    '.|.'    ", "             "};
+			return fw13;
+		case 14:
+			String[] fw14 = {"             ", "     .|.     ", "    -=+=-    ", "     .|.     ", "             "};
+			return fw14;
+		case 15:
+			String[] fw15 = {"             ", "             ", "     =+=     ", "             ", "             "};
+			return fw15;
+		case 16:
+			String[] fw16 = {"             ", "             ", "      +      ", "             ", "             "};
+			return fw16;
+		default:
+			return null;
+		}
+	}
 }

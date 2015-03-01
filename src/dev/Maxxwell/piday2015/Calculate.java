@@ -12,7 +12,8 @@ public class Calculate extends Thread {
 	}
 	
 	public void run() {
-		while (true) {
+		boolean running = true;
+		while (running) {
 			int su = secondsDistance();
 			System.out.println("Confirmed " + su + " seconds until destination date.");
 			
@@ -31,6 +32,11 @@ public class Calculate extends Thread {
 				e.printStackTrace();
 			}
 			System.out.println("Slept for one second while looping through the countdown calculator.");
+			
+			if (times[0] == 0 && times[1] == 0 && times[2] == 0 && times[3] == 1) {
+				d.setVisible(false);
+				new Celebrate();
+			}
 		}
 	}
 	
@@ -70,28 +76,28 @@ public class Calculate extends Thread {
 			}
 		}
 		
-		if (!day.equals("14")) {
+		if (!day.equals("01")) {
 			if (day.toCharArray()[0] == '0') {
 				day = "" + day.toCharArray()[1];
 			}
 			
-			daydistance = 14 - Integer.parseInt(day);
+			daydistance = 1 - Integer.parseInt(day);
 		}
 		
-		if (!hour.equals("09")) {
+		if (!hour.equals("00")) {
 			if (hour.toCharArray()[0] == '0') {
 				hour = "" + hour.toCharArray()[1];
 			}
 			
-			hourdistance = 9 - Integer.parseInt(hour);
+			hourdistance = 0 - Integer.parseInt(hour);
 		}
 		
-		if (!minute.equals("26")) {
+		if (!minute.equals("13")) {
 			if (minute.toCharArray()[0] == '0') {
 				minute = "" + minute.toCharArray()[1];
 			}
 			
-			minutedistance = 26 - Integer.parseInt(minute);
+			minutedistance = 13 - Integer.parseInt(minute);
 		}
 		
 		if (!second.equals("53")) {
